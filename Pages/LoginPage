@@ -1,0 +1,38 @@
+// Bibliotecas
+
+// Namespace
+namespace pages
+{
+
+
+//Classe
+public class LoginPage : CommonPage
+{
+
+  //Atributos
+    //Mapeamento dos Elementos
+    private IWebElement txtUsuario => driver.FidElement(By.id("user-name"));
+    
+    private IWebElement txtSenha => driver.FidElement(By.id("password"));
+
+    private IWebElement btnLogin => driver.FidElement(By.id("login-button"));
+
+//Métodos e Funções
+  //Construtor
+  public LoginPage(IWedDriver driver):base(driver){}
+
+  //Ações a serem usadas na automação
+  public void PreencherUsuarioESenha(string usuario, string senha)
+  }
+    txtUsuario.SendKeys(usuario);
+    txtSenha.SendKeys(senha);
+  } 
+  public void ClicarNoBotaoLogi()
+  {
+    btnLogin.Click();
+  }
+  public void DarEnter()
+  {
+    txtSenha.SendKeys(Keys.Enter);
+    
+  }
